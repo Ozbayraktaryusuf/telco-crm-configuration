@@ -14,7 +14,9 @@ spring:
     name: searchService
   data:
     mongodb:
-      database: inventory
+      host: localhost
+      port: 27017
+      database: customer
       uri: mongodb://localhost:27017
   kafka:
     consumer:

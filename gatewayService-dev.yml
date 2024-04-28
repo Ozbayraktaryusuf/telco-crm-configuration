@@ -28,3 +28,7 @@ spring:
           id: identity-service
           predicates[0]: Path=/identity-service/api/v1/auth/**
           uri: lb://identityService
+        routes[3]:
+          id: search-service
+          predicates[0]: Path=/search-service/api/v1/customers/**
+          uri: lb://searchService

@@ -14,7 +14,7 @@ spring:
     name: searchService
   data:
     mongodb:
-      database: customers
+      database: crm_search
       port: 27017
       host: localhost
   kafka:

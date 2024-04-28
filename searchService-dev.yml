@@ -14,8 +14,12 @@ spring:
     name: searchService
   data:
     mongodb:
-      uri: mongodb://mongoadmin:123456@localhost:27017/customers
+      authentication-database: admin
+      username: mongoadmin
+      password: 123456
       database: customers
+      port: 27017
+      host: localhost
   kafka:
     consumer:
       auto-offset-reset: earliest
@@ -26,5 +30,4 @@ spring:
         spring:
           json:
             trusted:
-              packages: '*'
-  
+              packages: "*"

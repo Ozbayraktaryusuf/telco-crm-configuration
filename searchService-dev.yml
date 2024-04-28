@@ -15,6 +15,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://mongoadmin:123456@localhost:27017/customers
+      database: customers
   kafka:
     consumer:
       auto-offset-reset: earliest

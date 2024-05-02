@@ -18,6 +18,7 @@ spring:
         routes[0]:
           id: customer-service
           predicates[0]: Path=/customer-service/api/v1/customers/**
+          predicates[1]: Path=/customer-service/api/v1/addresses/**
           uri: lb://customerService
         routes[1]:
           id: discovery-server

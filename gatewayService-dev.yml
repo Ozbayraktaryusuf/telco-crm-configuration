@@ -32,3 +32,7 @@ spring:
           id: search-service
           predicates[0]: Path=/search-service/api/v1/customers/**
           uri: lb://searchService
+        routes[4]:
+          id: account-service
+          predicates[0]: Path=/account-service/api/v1/accounts/**
+          uri: lb://accountService

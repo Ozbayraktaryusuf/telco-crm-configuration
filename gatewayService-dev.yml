@@ -14,7 +14,6 @@ spring:
     name: gatewayService
   cloud:
     gateway:
-      mvc:
         routes[0]:
           id: customer-service
           predicates[0]: Path=/customer-service/api/v1/customers/**

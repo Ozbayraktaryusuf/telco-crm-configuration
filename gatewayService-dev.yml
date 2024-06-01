@@ -10,6 +10,9 @@ eureka:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
     preferIpAddress: true
 management:
+  endpoint:
+    metrics:
+      enabled: true
   endpoints:
     web:
       exposure:

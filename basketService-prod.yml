@@ -38,3 +38,11 @@ refreshToken:
   expiration:
     days: 10
   cookie-key: refresh-token
+management:
+  endpoint:
+    metrics:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"

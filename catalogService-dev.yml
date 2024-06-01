@@ -13,9 +13,10 @@ spring:
   application:
     name: catalogService
   datasource:
-    url: jdbc:postgresql://localhost:5432/crm_catalog
-    username: postgres
-    password: 123456
+    url: jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;databaseName=crm_catalog
+    username: sa
+    password: yourpassword
+    platform: mssql
   jpa:
     hibernate:
       ddl-auto: update

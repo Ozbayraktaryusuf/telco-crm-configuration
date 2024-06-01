@@ -17,6 +17,8 @@ spring:
       database: crm_search
       port: 27017
       host: localhost
+  zipkin:
+    base-url: http://localhost:9411
   kafka:
     consumer:
       auto-offset-reset: earliest

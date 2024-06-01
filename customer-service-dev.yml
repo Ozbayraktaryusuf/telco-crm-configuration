@@ -8,10 +8,10 @@ eureka:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
     preferIpAddress: true
 server:
-  port: 0
+  port: 7004
 spring:
   application:
-    name: customerService
+    name: customer-service
   datasource:
     url: jdbc:postgresql://localhost:5432/crm_customer
     username: postgres

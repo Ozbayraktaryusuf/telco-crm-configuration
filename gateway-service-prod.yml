@@ -11,7 +11,7 @@ eureka:
     preferIpAddress: true
 spring:
   application:
-    name: gatewayService
+    name: gateway-service
   cloud:
     gateway:
       default-filters:

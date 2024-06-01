@@ -8,14 +8,15 @@ eureka:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
     preferIpAddress: true
 server:
-  port: 7008
+  port: 7006
 spring:
   application:
-    name: basketService
+    name: search-service
   data:
-    redis:
+    mongodb:
+      database: crm_search
+      port: 27017
       host: localhost
-      port: 6379
   kafka:
     consumer:
       auto-offset-reset: earliest

@@ -14,8 +14,8 @@ spring:
     name: customer-service
   datasource:
     url: jdbc:postgresql://customer-db:5432/crm_customer
-    username: postgres
-    password: 123456
+    username: pair2
+    password: pair2crm
   jpa:
     hibernate:
       ddl-auto: update

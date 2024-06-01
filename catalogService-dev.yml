@@ -19,8 +19,10 @@ spring:
     platform: mssql
   jpa:
     hibernate:
-      dialect: org.hibernate.dialect.SQLServerDialect
       ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServerDialect
     properties:
       jakarta:
         persistence:

@@ -24,7 +24,7 @@ spring:
         id: discovery-server
         predicates[0]: Path=/eureka/web
         filters[0]: SetPath=/
-        uri: http://localhost:7000
+        uri: http://discovery-server:7000
       routes[2]:
         id: identity-service
         predicates[0]: Path=/identity-service/api/v1/**

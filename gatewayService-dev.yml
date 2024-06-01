@@ -66,3 +66,11 @@ spring:
         id: order-service
         predicates[0]: Path=/order-service/api/v1/individual-orders/**
         uri: lb://orderService
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  tracing:
+    sampling:
+      probability: 1.0

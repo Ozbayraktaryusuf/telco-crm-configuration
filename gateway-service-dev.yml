@@ -23,7 +23,7 @@ spring:
         predicates[2]: Path=/customer-service/api/v1/cities/**
         predicates[3]: Path=/customer-service/api/v1/individual-customers/**
         predicates[4]: Path=/customer-service/api/v1/districts/**
-        uri: lb://customerService
+        uri: lb://customer-service
       routes[1]:
         id: discovery-server
         predicates[0]: Path=/eureka/web
@@ -32,31 +32,31 @@ spring:
       routes[2]:
         id: identity-service
         predicates[0]: Path=/identity-service/api/v1/**
-        uri: lb://identityService
+        uri: lb://identity-service
       routes[3]:
         id: search-service
         predicates[0]: Path=/search-service/api/v1/customers/**
         predicates[1]: Path=/search-service/api/v1/products/**
-        uri: lb://searchService
+        uri: lb://search-service
       routes[4]:
         id: account-service
         predicates[0]: Path=/account-service/api/v1/accounts/**
         predicates[1]: Path=/account-service/api/v1/account-types/**
-        uri: lb://accountService
+        uri: lb://account-service
       routes[5]:
         id: order-service
         predicates[0]: Path=/order-service/api/v1/individual-orders/**
-        uri: lb://orderService
+        uri: lb://order-service
       routes[6]:
         id: invoice-service
         predicates[0]: Path=/invoice-service/api/v1/individual-invoices/**
-        uri: lb://invoiceService
+        uri: lb://invoice-service
       routes[7]:
         id: catalog-service
         predicates[0]: Path=/catalog-service/api/v1/categories/**
         predicates[1]: Path=/catalog-service/api/v1/products/**
-        uri: lb://catalogService
+        uri: lb://catalog-service
       routes[8]:
         id: basket-service
         predicates[0]: Path=/basket-service/api/v1/baskets/**
-        uri: lb://basketService
+        uri: lb://basket-service

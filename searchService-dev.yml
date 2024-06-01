@@ -37,11 +37,3 @@ refreshToken:
   expiration:
     days: 10
   cookie-key: refresh-token
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  tracing:
-    sampling:
-      probability: 1.0

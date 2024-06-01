@@ -9,11 +9,6 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
     preferIpAddress: true
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
 spring:
   application:
     name: gatewayService
@@ -25,8 +20,8 @@ spring:
         id: customer-service
         predicates[0]: Path=/customer-service/api/v1/customers/**
         predicates[1]: Path=/customer-service/api/v1/addresses/**
-        predicates[2]: Path=/customer-service/api/v1/individual-customers/**
-        predicates[3]: Path=/customer-service/api/v1/cities/**
+        predicates[2]: Path=/customer-service/api/v1/cities/**
+        predicates[3]: Path=/customer-service/api/v1/individual-customers/**
         predicates[4]: Path=/customer-service/api/v1/districts/**
         uri: lb://customerService
       routes[1]:
@@ -36,8 +31,7 @@ spring:
         uri: http://localhost:7000
       routes[2]:
         id: identity-service
-        predicates[0]: Path=/identity-service/api/v1/auth/**
-        predicates[1]: Path=/identity-service/api/v1/users/**
+        predicates[0]: Path=/identity-service/api/v1/**
         uri: lb://identityService
       routes[3]:
         id: search-service
@@ -50,19 +44,19 @@ spring:
         predicates[1]: Path=/account-service/api/v1/account-types/**
         uri: lb://accountService
       routes[5]:
-        id: basket-service
-        predicates[0]: Path=/basket-service/api/v1/baskets/**
-        uri: lb://basketService
+        id: order-service
+        predicates[0]: Path=/order-service/api/v1/individual-orders/**
+        uri: lb://orderService
       routes[6]:
+        id: invoice-service
+        predicates[0]: Path=/invoice-service/api/v1/individual-invoices/**
+        uri: lb://invoiceService
+      routes[7]:
         id: catalog-service
         predicates[0]: Path=/catalog-service/api/v1/categories/**
         predicates[1]: Path=/catalog-service/api/v1/products/**
         uri: lb://catalogService
-      routes[7]:
-        id: invoice-service
-        predicates[0]: Path=/invoice-service/api/v1/individual-invoices/**
-        uri: lb://invoiceService
       routes[8]:
-        id: order-service
-        predicates[0]: Path=/order-service/api/v1/individual-orders/**
-        uri: lb://orderService
+        id: basket-service
+        predicates[0]: Path=/basket-service/api/v1/baskets/**
+        uri: lb://basketService

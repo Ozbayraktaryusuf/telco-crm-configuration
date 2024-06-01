@@ -23,7 +23,6 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.SQLServerDialect
-    properties:
       jakarta:
         persistence:
           validation:

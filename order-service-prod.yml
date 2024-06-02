@@ -3,7 +3,7 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://localhost:7000/eureka
+      defaultZone: http://discovery-server:7000/eureka
   instance:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
     preferIpAddress: true
@@ -13,9 +13,9 @@ spring:
   application:
     name: order-service
   datasource:
-    url: jdbc:postgresql://localhost:5432/crm_order
-    username: postgres
-    password: 123456
+    url: jdbc:postgresql://order-db:5432/crm_order
+    username: pair2
+    password: pair2crm
   jpa:
     hibernate:
       ddl-auto: update
@@ -26,8 +26,9 @@ spring:
             mode: none
     show-sql: true
   kafka:
+    bootstrap-servers: kafka:29092
     producer:
-      bootstrap-servers: localhost:9092
+      bootstrap-servers: kafka:29092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 jwt:

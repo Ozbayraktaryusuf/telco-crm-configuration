@@ -3,7 +3,7 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://localhost:7000/eureka
+      defaultZone: http://discovery-server:7000/eureka
   instance:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
     preferIpAddress: true
@@ -16,11 +16,14 @@ spring:
     mongodb:
       database: crm_search
       port: 27017
-      host: localhost
+      host: search-db
+      username: pair2
+      password: pair2crm
   kafka:
+    bootstrap-servers: kafka:29092
     consumer:
       auto-offset-reset: earliest
-      bootstrap-servers: localhost:9092
+      bootstrap-servers: kafka:29092
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:

@@ -13,7 +13,7 @@ spring:
   application:
     name: order-service
   datasource:
-    url: jdbc:postgresql://localhost:5432/crm_order
+    url: jdbc:postgresql://localhost:5432/crm_orders
     username: postgres
     password: 12345
   jpa:

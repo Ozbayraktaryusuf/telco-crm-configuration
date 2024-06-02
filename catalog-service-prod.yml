@@ -3,7 +3,7 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://localhost:7000/eureka
+      defaultZone: http://discovery-server:7000/eureka
   instance:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
     preferIpAddress: true
@@ -13,7 +13,7 @@ spring:
   application:
     name: catalog-service
   datasource:
-    url: jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;databaseName=crm_catalog
+    url: jdbc:sqlserver://catalog-db:1433;encrypt=true;trustServerCertificate=true;databaseName=crm_catalog
     username: sa
     password: Mssql123.
     platform: mssql

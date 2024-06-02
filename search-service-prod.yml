@@ -17,8 +17,6 @@ spring:
       database: crm_search
       port: 27017
       host: search-db
-      username: pair2
-      password: pair2crm
   kafka:
     bootstrap-servers: kafka:29092
     consumer:
